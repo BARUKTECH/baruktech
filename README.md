@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BARUK TECH
 
-## Getting Started
+Site institucional e portfólio vivo da BARUK TECH — tecnologia, educação e inovação em um único ecossistema digital.
 
-First, run the development server:
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack)
+- [React 19](https://react.dev)
+- [TypeScript 5](https://www.typescriptlang.org)
+- [Tailwind CSS 4](https://tailwindcss.com)
+- [Motion](https://motion.dev) para animações
+- [Lucide](https://lucide.dev) para ícones
+- [Playwright](https://playwright.dev) para QA visual e funcional local
+
+## Requisitos
+
+- Node.js 20.9 ou superior
+- npm
+
+## Como rodar
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-## Learn More
+```bash
+npm run dev      # ambiente de desenvolvimento
+npm run lint     # ESLint
+npx tsc --noEmit # verificação de tipos
+npm run build    # build de produção
+npm run start    # servir o build de produção
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Estrutura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+src/
+  app/         # layout, página principal e estilos globais
+  components/  # seções, layout, UI, visuais SVG e jogo BARUK-01
+  content/     # conteúdo e configuração central do site
+  lib/         # utilitários, incluindo o link do WhatsApp
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## WhatsApp
 
-## Deploy on Vercel
+O número e a mensagem padrão ficam em `src/content/site.ts`, na chave `whatsapp`. O link é montado em `src/lib/whatsapp.ts` e reutilizado por todos os botões.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## QA
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Os scripts de verificação local ficam em `.qa/`, que não é versionado. Eles cobrem responsividade, acessibilidade, links, movimento reduzido e o jogo BARUK-01.
+
+## Deploy
+
+O projeto é estático na rota principal e pode ser publicado na Vercel ou em qualquer ambiente compatível com Next.js.
+
+```bash
+npm run build
+npm run start
+```

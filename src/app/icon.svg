@@ -1,0 +1,32 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="baruk-mark" x1="12" y1="10" x2="54" y2="56">
+      <stop stop-color="#B98CFF" />
+      <stop offset="0.48" stop-color="#7900FF" />
+      <stop offset="1" stop-color="#087BFF" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#08090D" />
+  <rect
+    x="0.75"
+    y="0.75"
+    width="62.5"
+    height="62.5"
+    rx="13.25"
+    stroke="#F5F5FF"
+    stroke-opacity="0.12"
+    stroke-width="1.5"
+  />
+  <path
+    d="M18 48V16h16c8.5 0 13 3.8 13 10 0 4.2-2.4 7.2-6.4 8.5 5.2 1.2 8.4 4.8 8.4 9.6C49 50.8 44 54 36.2 54H18Z"
+    stroke="url(#baruk-mark)"
+    stroke-width="3"
+    stroke-linejoin="round"
+  />
+  <path d="M18 33h15" stroke="url(#baruk-mark)" stroke-width="3" />
+  <circle cx="53" cy="12.5" r="2.6" fill="#00CFFF" />
+</svg>
